@@ -1,0 +1,719 @@
+{
+  "version": 4,
+  "terraform_version": "0.12.28",
+  "serial": 12,
+  "lineage": "2cad85cd-b49f-5afd-9e07-f4db454a5a30",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "aws_cloudfront_distribution",
+      "name": "terraform",
+      "provider": "provider.aws",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "active_trusted_signers": {
+              "enabled": "false",
+              "items.#": "0"
+            },
+            "aliases": [
+              "terraform.avioranalytics.net"
+            ],
+            "arn": "arn:aws:cloudfront::616100519737:distribution/E31D82EZ4C4EVL",
+            "cache_behavior": [],
+            "caller_reference": "terraform-20200716160026501600000001",
+            "comment": null,
+            "custom_error_response": [],
+            "default_cache_behavior": [
+              {
+                "allowed_methods": [
+                  "GET",
+                  "HEAD"
+                ],
+                "cached_methods": [
+                  "GET",
+                  "HEAD"
+                ],
+                "compress": false,
+                "default_ttl": 3600,
+                "field_level_encryption_id": "",
+                "forwarded_values": [
+                  {
+                    "cookies": [
+                      {
+                        "forward": "none",
+                        "whitelisted_names": []
+                      }
+                    ],
+                    "headers": [],
+                    "query_string": false,
+                    "query_string_cache_keys": []
+                  }
+                ],
+                "lambda_function_association": [],
+                "max_ttl": 86400,
+                "min_ttl": 0,
+                "smooth_streaming": false,
+                "target_origin_id": "S3-*.avioranalytics.net",
+                "trusted_signers": [],
+                "viewer_protocol_policy": "redirect-to-https"
+              }
+            ],
+            "default_root_object": "index.html",
+            "domain_name": "d1whpu6pm978kb.cloudfront.net",
+            "enabled": true,
+            "etag": "E1NH467SVX4EYW",
+            "hosted_zone_id": "Z2FDTNDATAQYW2",
+            "http_version": "http2",
+            "id": "E31D82EZ4C4EVL",
+            "in_progress_validation_batches": 0,
+            "is_ipv6_enabled": false,
+            "last_modified_time": "2020-07-16 16:00:26.896 +0000 UTC",
+            "logging_config": [],
+            "ordered_cache_behavior": [],
+            "origin": [
+              {
+                "custom_header": [],
+                "custom_origin_config": [
+                  {
+                    "http_port": 80,
+                    "https_port": 443,
+                    "origin_keepalive_timeout": 5,
+                    "origin_protocol_policy": "http-only",
+                    "origin_read_timeout": 30,
+                    "origin_ssl_protocols": [
+                      "TLSv1",
+                      "TLSv1.1",
+                      "TLSv1.2"
+                    ]
+                  }
+                ],
+                "domain_name": "terraform.avioranalytics.net.s3-website-us-east-1.amazonaws.com",
+                "origin_id": "S3-*.avioranalytics.net",
+                "origin_path": "",
+                "s3_origin_config": []
+              }
+            ],
+            "origin_group": [],
+            "price_class": "PriceClass_100",
+            "restrictions": [
+              {
+                "geo_restriction": [
+                  {
+                    "locations": [],
+                    "restriction_type": "none"
+                  }
+                ]
+              }
+            ],
+            "retain_on_delete": false,
+            "status": "Deployed",
+            "tags": {
+              "Name": "Terraform CouldFront"
+            },
+            "viewer_certificate": [
+              {
+                "acm_certificate_arn": "arn:aws:acm:us-east-1:616100519737:certificate/5943bf3f-7158-4ff1-88c3-8412117a5a88",
+                "cloudfront_default_certificate": false,
+                "iam_certificate_id": "",
+                "minimum_protocol_version": "TLSv1.2_2018",
+                "ssl_support_method": "sni-only"
+              }
+            ],
+            "wait_for_deployment": true,
+            "web_acl_id": ""
+          },
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjEifQ=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_cognito_user_pool",
+      "name": "avior",
+      "provider": "provider.aws",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "admin_create_user_config": [
+              {
+                "allow_admin_create_user_only": false,
+                "invite_message_template": [
+                  {
+                    "email_message": "Your username is {username} and temporary password is {####}. ",
+                    "email_subject": "Your temporary password",
+                    "sms_message": "Your username is {username} and temporary password is {####}. "
+                  }
+                ],
+                "unused_account_validity_days": 7
+              }
+            ],
+            "alias_attributes": null,
+            "arn": "arn:aws:cognito-idp:us-east-1:616100519737:userpool/us-east-1_aGBWAn8G9",
+            "auto_verified_attributes": [],
+            "creation_date": "2019-01-03T13:31:32Z",
+            "device_configuration": [],
+            "email_configuration": [
+              {
+                "email_sending_account": "COGNITO_DEFAULT",
+                "from_email_address": "",
+                "reply_to_email_address": "",
+                "source_arn": ""
+              }
+            ],
+            "email_verification_message": "\u003c!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"\u003e\n\u003chtml style=\"width:100%;font-family:Oswald, sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0;\"\u003e\n \u003chead\u003e \n  \u003cmeta charset=\"UTF-8\"\u003e \n  \u003cmeta content=\"width=device-width, initial-scale=1\" name=\"viewport\"\u003e \n  \u003cmeta name=\"x-apple-disable-message-reformatting\"\u003e \n  \u003cmeta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"\u003e \n  \u003cmeta content=\"telephone=no\" name=\"format-detection\"\u003e \n  \u003ctitle\u003eWelcome To Avior!\u003c/title\u003e \n  \u003clink href=\"https://fonts.googleapis.com/css?family=Oswald:400,700\" rel=\"stylesheet\"\u003e \n  \u003clink href=\"https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i\" rel=\"stylesheet\"\u003e \n  \u003clink rel=\"shortcut icon\" type=\"image/png\" href=\"https://demo.stripo.email/assets/img/favicon.png\"\u003e \n  \u003cstyle type=\"text/css\"\u003e\n    @media only screen and (max-width:430px) {\n      p, ul li, ol li, a { \n        font-size:16px!important; \n        line-height:150%!important \n      } \n      a[x-apple-data-detectors=true] {\n      color: #ffffff !important;\n      text-decoration: none !important;\n    }\n      a {\n      color: #ffffff !important;\n      text-decoration: none !important;\n      }\n      a:hover {\n      color: #0000ff !important;\n    }\n        h1 { \n          font-size:30px!important; \n          text-align:center; \n          line-height:120% \n        } \n        \n        h2 { \n          font-size:26px!important; \n          text-align:center; \n          line-height:120% \n        } \n        \n        h3 { \n          font-size:20px!important; \n          text-align:center; \n          line-height:120% \n        } \n        h1 a { \n          font-size:30px!important;\n          color: #ffffff !important;\n        } \n        h2 a { \n          font-size:26px!important; \n          color: #ffffff !important;\n        } \n        h3 a { \n          font-size:20px!important;\n          color: #ffffff !important;\n        } \n        *[class=\"gmail-fix\"] { \n          display:none!important \n        } \n        .adapt-img { \n          width:100%!important; \n          height:auto!important; \n        } \n      }\n/*End @media*/\n    a[x-apple-data-detectors=true] {\n      color: #ffffff !important;\n      text-decoration: none !important;\n    }\n    a {\n      color: #ffffff !important;\n      text-decoration: none !important;\n    }\n    a:hover {\n      color: #0000ff !important;\n      }\n\n#outlook a {\n    padding:0;\n    color: #ffffff !important;\n    text-decoration: none !important;\n}\n.ExternalClass {\n    width:100%;\n}\n.ExternalClass,\n.ExternalClass p,\n.ExternalClass span,\n.ExternalClass font,\n.ExternalClass td,\n.ExternalClass div {\n    line-height:100%;\n}\n\na[x-apple-data-detectors] {\n    color: #ffffff !important;\n    text-decoration:none!important;\n    font-size:inherit!important;\n    font-family:'Oswald', sans-serif;\n    font-weight:inherit!important;\n    line-height:inherit!important;\n}\n\u003c/style\u003e \n\u003cstyle type=\"text/css\"\u003e\n  tr {\n    border-collapse: collapse;\n  }\n\n  table.es-wrapper {\n    mso-table-lspace:0pt;\n    mso-table-rspace:0pt;\n    border-collapse:collapse;\n    border-spacing:0px;\n    padding:0;\n    Margin:0;\n    width:100%;\n    height:100%;\n    background-repeat:repeat;\n    background-position:center top;\n  }\n  table.es-content {\n    padding:0px;\n    margin:0 auto; \n    text-align: center; \n    mso-table-lspace:0pt;\n    mso-table-rspace:0pt;\n    border-collapse:collapse;\n    border-spacing:0px;\n    table-layout:fixed !important;\n    width:100%;\n  }\n  table.es-content-body {\n    mso-table-lspace:0pt;\n    mso-table-rspace:0pt;\n    border-collapse:collapse;\n    border-spacing:0px;\n    width:100%;\n    padding:0px;\n    margin:0 auto;\n    text-align:center;\n    background-color: transparent;\n  }\n  table.basic {\n    margin:0 auto;\n    width:90%;\n    padding:0px;\n    mso-table-lspace:0pt;\n    mso-table-rspace:0pt;\n    border-collapse:collapse;\n    border-spacing:0px;\n  }\n  td.basic {\n    width:100%;\n    border-spacing:0px;\n    margin:0 auto;\n    padding-left:20px;\n    padding-right:20px;\n    padding-top:10px;\n    padding-bottom:10px;\n  }\n  \u003c/style\u003e\n  \u003cstyle type=\"text/css\"\u003e\n.button-1 {\n  display: inline-block;\n  -webkit-display: inline-block;\n  justify-content: center;\n  border-radius: 4px;\n  background-color: #1E93F0;\n  -webkit-text-size-adjust: none;\n  text-decoration: none;\n  border-radius: 4px;\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  mso-style-priority:100!important;\n  text-decoration:none!important;\n\n  width: 190px;\n  border-top: 1px solid #1E93F0; \n  border-right: 1px solid #1E93F0; \n  border-bottom: 1px solid #1E93F0; \n  border-left: 1px solid #1E93F0;\n  box-shadow: 0 4px #b5b5b5;\n  margin: 0 auto; \n  padding-top:5px;\n  padding-right:20px;\n  padding-bottom:5px;\n  padding-left:20px;\n  text-align: center;\n  vertical-align: middle;\n  word-break: keep-all;\n  mso-border-alt: none;\n  transition: all 0.5s;\n  cursor: pointer !important;\n}\n.button-1:hover {background-color: #1d74ef}\n\n.button-1 span {\n  cursor: pointer;\n  display: inline-block;\n  position: relative;\n  transition: 0.5s;\n}\n\n.button-1:active {\n  background-color: #1d74ef;\n  box-shadow: 0 5px #999;\n  transform: translateY(4px);\n}\n.button-2 {\n  display: inline-block;\n  -webkit-display: inline-block;\n  justify-content: center;\n  border-radius: 4px;\n  background-color: #EBF5FA;\n  -webkit-text-size-adjust: none;\n  text-decoration: none;\n  border-radius: 4px;\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  mso-style-priority:100!important;\n  text-decoration:none!important;\n\n  width: 190px;\n  border-top: 1px solid #EBF5FA;\n  border-right: 1px solid #EBF5FA; \n  border-bottom: 1px solid #EBF5FA;\n  border-left: 1px solid #EBF5FA;\n  box-shadow: 0 4px #b5b5b5;\n  margin: 0 auto; \n  padding-top:5px;\n  padding-right:20px;\n  padding-bottom:5px;\n  padding-left:20px;\n  text-align: center;\n  vertical-align: middle;\n  word-break: keep-all;\n  mso-border-alt: none;\n  transition: all 0.5s;\n  cursor: pointer !important;\n}\n.button-2:hover {background-color: #dce2e5}\n\n.button-2 span {\n  cursor: pointer;\n  display: inline-block;\n  position: relative;\n  transition: 0.5s;\n}\n\n.button-2:active {\n  background-color: #dce2e5;\n  box-shadow: 0 5px #999;\n  transform: translateY(4px);\n}\n\u003c/style\u003e\n  \u003c!-- Next to note, td with constant left right padding --\u003e\n\n \u003c/head\u003e \n \u003cbody style=\"width:100%;font-family:Oswald, sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0;\"\u003e \n  \u003cdiv class=\"es-wrapper-color\" style=\"background-color:#F6F6F6;\"\u003e \n\n\u003c!-- These Tables add the Avior Logo to the Header --\u003e\n\n       \u003ctable class=\"es-content\"\u003e \n\n         \u003ctr\u003e \n          \u003ctd style=\"background-color:#DBE5EA;\"\u003e \n\n           \u003ctable class=\"es-content-body\"\u003e \n\n             \u003ctr\u003e \n                \u003ctd class=\"basic\" style=\"padding-top:15px;padding-bottom:15px;background-color:#242B3D;border-top-left-radius:5px;border-top-right-radius:5px;\"\u003e \u003cimg class=\"adapt-img\" src=\"http://avioranalytics.net/wp-content/uploads/2019/03/Avior_Logo_Fiverr.png\" alt=\"\" style=\"margin:0 auto;display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;max-width:42%;\"\u003e\u003c/td\u003e \n             \u003c/tr\u003e \n           \u003c/table\u003e \u003c/td\u003e \n         \u003c/tr\u003e \n       \u003c/table\u003e \n\n\n       \u003c!-- End Logo --\u003e\n\n       \u003ctable class=\"es-content\"\u003e \n\n         \u003ctr\u003e \n          \u003ctd style=\"background-color:#DBE5EA;\"\u003e \n\n           \u003ctable class=\"es-content-body\"\u003e \n\n             \u003ctr\u003e \n              \u003ctd class=\"basic\" style=\"padding-top:40px;padding-bottom:40px;background-color:#EBF5FA;\"\u003e\n\n                \u003ctable class=\"basic\"\u003e \n\n                \u003c!-- Mail Icon --\u003e\n\n                  \u003ctr\u003e \n                  \u003ctd class=\"basic\"\u003e \u003cimg class=\"adapt-img\" src=\"http://avioranalytics.net/wp-content/uploads/2019/03/Mail-Icon.png\" alt=\"\" style=\"margin:0 auto;display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;max-width:95px;\"\u003e\u003c/td\u003e \n                  \u003c/tr\u003e \n\n                  \u003c!-- Welcome To Avior --\u003e\n\n                  \u003ctr\u003e \n                  \u003ctd class=\"basic\"\u003e \u003ch1 style=\"Margin:0;line-height:36px;mso-line-height-rule:exactly;font-size:30px;font-style:normal;font-weight:normal;color:#333333;text-align:center;\"\u003eWelcome To Avior!\u003c/h1\u003e \u003c/td\u003e \n                  \u003c/tr\u003e \n\n                  \u003c!-- Intro Paragraph --\u003e\n\n                  \u003ctr\u003e \n                    \u003ctd style=\"padding:0;Margin:0;font-size:16px;font-family:'open sans', 'helvetica neue', helvetica, arial, sans-serif;line-height:24px;color:#333333;text-align:left;\"\u003e \u003cp style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;padding-bottom:15px;\"\u003eDear User,\u003c/p\u003e\u003cp style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;padding-bottom:15px;\"\u003eThank you for joining Avior! We are excited to help you take ownership of your care and experience a full return to the activities that are important to you.\u003c/p\u003e\u003cp style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;\"\u003ePlease follow the instructions below to ﬁnish creating your account.\u003c/p\u003e \u003c/td\u003e \n                  \u003c/tr\u003e \n                \u003c/table\u003e \u003c/td\u003e \n              \u003c/tr\u003e \n           \u003c/table\u003e \u003c/td\u003e \n         \u003c/tr\u003e \n       \u003c/table\u003e \n\n       \u003ctable class=\"es-content\" style=\"background-color:#DBE5EA;\"\u003e \n         \u003ctr\u003e \n          \u003ctd\u003e \n           \u003ctable class=\"es-content-body\" style=\"background-color:#FFFFFF;\"\u003e \n             \u003ctr\u003e \n              \u003ctd class=\"basic\" style=\"padding-top:30px;padding-bottom:30px;\"\u003e \n\n               \u003ctable class=\"basic\"\u003e \n                \u003c!-- Step 1 --\u003e\n\n                 \u003ctr\u003e \n                  \u003ctd class=\"basic\"\u003e \u003ch1 style=\"Margin:0;line-height:31px;mso-line-height-rule:exactly;font-size:26px;font-style:normal;font-weight:normal;color:#1E93F0;text-align:center;padding-bottom:10px;\"\u003eSTEP 3:\u003c/h1\u003e\u003ch1 style=\"Margin:0;line-height:31px;mso-line-height-rule:exactly;font-size:26px;font-style:normal;font-weight:normal;color:#1E93F0;text-align:center;\"\u003eSet A New Password\u003c/h1\u003e \u003c/td\u003e \n                \u003c/tr\u003e \n\n                \u003c!-- Text Block --\u003e\n\n                  \u003ctr\u003e \n                    \u003ctd class=\"basic\"\u003e \u003cp style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:16px;font-family:'open sans', 'helvetica neue', helvetica, arial, sans-serif;line-height:24px;color:#333333;\"\u003eHere is your Verification Code:\u003c/p\u003e \n                    \u003c/td\u003e \n                    \u003c/tr\u003e \n\n                  \u003c!-- Code: --\u003e\n\n                     \u003ctr\u003e \n                      \u003ctd class=\"basic\"\u003e \u003cp style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size: 20px; line-height: 32px;color:#333333;\"\u003e{####}\u003c/p\u003e \n                    \u003c/td\u003e  \n                     \u003c/tr\u003e \n\n                     \u003c!-- Text Block --\u003e\n\n                    \u003ctr\u003e \n                    \u003ctd class=\"basic\"\u003e \u003cp style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:16px;font-family:'open sans', 'helvetica neue', helvetica, arial, sans-serif;line-height:24px;color:#333333;\"\u003ePlease click below and set your own password.\u003c/p\u003e \n                    \u003c/td\u003e \n                    \u003c/tr\u003e \n\n                    \u003ctr\u003e \n                      \u003ctd class=\"basic\"\u003e \n                        \u003ca href=\"https://patient.avioranalytics.net/reset-password\" target=\"_blank\"\u003e\n                        \u003cbutton class=\"button-1\"\u003e\n                        \u003cdiv style=\"font-size: 20px; line-height: 32px; color:#FFFFFF;\"\u003e\n                          I'm A Patient\n                        \u003c/div\u003e\n                        \u003c/button\u003e \n                        \u003c/a\u003e\n                      \u003c/td\u003e \n                     \u003c/tr\u003e \n\n                     \u003ctr\u003e \n                      \u003ctd class=\"basic\"\u003e \n                        \u003ca href=\"https://clinic.avioranalytics.net/reset-password\" target=\"_blank\"\u003e\n                        \u003cbutton class=\"button-2\"\u003e\n                          \u003cdiv style=\"font-size: 20px; line-height: 32px;\"\u003e\n                            I'm A Therapist\n                          \u003c/div\u003e\n                        \u003c/button\u003e \n                        \u003c/a\u003e\n                      \u003c/td\u003e \n                     \u003c/tr\u003e\n\n                     \u003ctr\u003e \n                      \u003ctd style=\"padding-top:15px;font-size:16px;font-family:'open sans', 'helvetica neue', helvetica, arial, sans-serif;line-height:24px;color:#333333;text-align:left;\"\u003e \u003cp style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;padding-bottom:10px;\"\u003eSincerely,\u003c/p\u003e\u003cp style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;\"\u003eThe Avior Team\u003c/p\u003e \u003c/td\u003e \n                     \u003c/tr\u003e \n                   \u003c/table\u003e \u003c/td\u003e \n             \u003c/tr\u003e \n           \u003c/table\u003e \u003c/td\u003e \n         \u003c/tr\u003e \n       \u003c/table\u003e \n\n       \u003ctable class=\"es-content\"\u003e \n\n         \u003ctr\u003e \n          \u003ctd style=\"padding:0;margin:0 auto;background-color:#DBE5EA;\"\u003e \n\n           \u003ctable class=\"es-content-body\" style=\"background-color:#51585D;border-bottom-left-radius:5px;border-bottom-right-radius:5px;\"\u003e \n\n             \u003ctr\u003e \n              \u003ctd style=\"Margin:0;padding-left:20px;padding-right:20px;padding-top:25px;padding-bottom:25px;\"\u003e \n\n               \u003ctable class=\"basic\"\u003e \n\n                 \u003ctr\u003e \n                  \u003ctd style=\"padding:0;Margin:0 auto;width:390px;vertical-align:top;\"\u003e \n\n                   \u003ctable class=\"basic\"\u003e \n\n                     \u003ctr\u003e \n                      \u003ctd style=\"padding:0;Margin:0 auto;\"\u003e \u003cp style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:'open sans', 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#FFFFFF;\"\u003e© 2019, Avior Analytics, LLC All rights reserved.\u003c/p\u003e\u003c/td\u003e \n                     \u003c/tr\u003e \n                   \u003c/table\u003e \u003c/td\u003e \n                 \u003c/tr\u003e \n               \u003c/table\u003e \u003c/td\u003e \n             \u003c/tr\u003e \n           \u003c/table\u003e \u003c/td\u003e \n         \u003c/tr\u003e \n       \u003c/table\u003e \n       \u003c/td\u003e \n     \u003c/tr\u003e \n   \u003c/table\u003e \n  \u003c/div\u003e  \n \u003c/body\u003e\n\u003c/html\u003e",
+            "email_verification_subject": "Final Step",
+            "endpoint": "cognito-idp.us-east-1.amazonaws.com/us-east-1_aGBWAn8G9",
+            "id": "us-east-1_aGBWAn8G9",
+            "lambda_config": [
+              {
+                "create_auth_challenge": "",
+                "custom_message": "arn:aws:lambda:us-east-1:616100519737:function:custom-cognito-message",
+                "define_auth_challenge": "",
+                "post_authentication": "",
+                "post_confirmation": "",
+                "pre_authentication": "",
+                "pre_sign_up": "",
+                "pre_token_generation": "",
+                "user_migration": "",
+                "verify_auth_challenge_response": ""
+              }
+            ],
+            "last_modified_date": "2020-07-16T03:22:50Z",
+            "mfa_configuration": "OFF",
+            "name": "avior-staging",
+            "password_policy": [
+              {
+                "minimum_length": 8,
+                "require_lowercase": true,
+                "require_numbers": true,
+                "require_symbols": false,
+                "require_uppercase": true,
+                "temporary_password_validity_days": 7
+              }
+            ],
+            "schema": [
+              {
+                "attribute_data_type": "String",
+                "developer_only_attribute": false,
+                "mutable": true,
+                "name": "email",
+                "number_attribute_constraints": [],
+                "required": true,
+                "string_attribute_constraints": [
+                  {
+                    "max_length": "2048",
+                    "min_length": "0"
+                  }
+                ]
+              }
+            ],
+            "sms_authentication_message": null,
+            "sms_configuration": [
+              {
+                "external_id": "5a6a8725-a448-4e7a-a0a0-d040b555ad17",
+                "sns_caller_arn": "arn:aws:iam::616100519737:role/service-role/aviorstaging-SMS-Role"
+              }
+            ],
+            "sms_verification_message": "Your verification code is {####}. ",
+            "software_token_mfa_configuration": [],
+            "tags": {},
+            "user_pool_add_ons": [],
+            "username_attributes": [
+              "email"
+            ],
+            "username_configuration": [],
+            "verification_message_template": [
+              {
+                "default_email_option": "CONFIRM_WITH_LINK",
+                "email_message": "\u003c!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"\u003e\n\u003chtml style=\"width:100%;font-family:Oswald, sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0;\"\u003e\n \u003chead\u003e \n  \u003cmeta charset=\"UTF-8\"\u003e \n  \u003cmeta content=\"width=device-width, initial-scale=1\" name=\"viewport\"\u003e \n  \u003cmeta name=\"x-apple-disable-message-reformatting\"\u003e \n  \u003cmeta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"\u003e \n  \u003cmeta content=\"telephone=no\" name=\"format-detection\"\u003e \n  \u003ctitle\u003eWelcome To Avior!\u003c/title\u003e \n  \u003clink href=\"https://fonts.googleapis.com/css?family=Oswald:400,700\" rel=\"stylesheet\"\u003e \n  \u003clink href=\"https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i\" rel=\"stylesheet\"\u003e \n  \u003clink rel=\"shortcut icon\" type=\"image/png\" href=\"https://demo.stripo.email/assets/img/favicon.png\"\u003e \n  \u003cstyle type=\"text/css\"\u003e\n    @media only screen and (max-width:430px) {\n      p, ul li, ol li, a { \n        font-size:16px!important; \n        line-height:150%!important \n      } \n      a[x-apple-data-detectors=true] {\n      color: #ffffff !important;\n      text-decoration: none !important;\n    }\n      a {\n      color: #ffffff !important;\n      text-decoration: none !important;\n      }\n      a:hover {\n      color: #0000ff !important;\n    }\n        h1 { \n          font-size:30px!important; \n          text-align:center; \n          line-height:120% \n        } \n        \n        h2 { \n          font-size:26px!important; \n          text-align:center; \n          line-height:120% \n        } \n        \n        h3 { \n          font-size:20px!important; \n          text-align:center; \n          line-height:120% \n        } \n        h1 a { \n          font-size:30px!important;\n          color: #ffffff !important;\n        } \n        h2 a { \n          font-size:26px!important; \n          color: #ffffff !important;\n        } \n        h3 a { \n          font-size:20px!important;\n          color: #ffffff !important;\n        } \n        *[class=\"gmail-fix\"] { \n          display:none!important \n        } \n        .adapt-img { \n          width:100%!important; \n          height:auto!important; \n        } \n      }\n/*End @media*/\n    a[x-apple-data-detectors=true] {\n      color: #ffffff !important;\n      text-decoration: none !important;\n    }\n    a {\n      color: #ffffff !important;\n      text-decoration: none !important;\n    }\n    a:hover {\n      color: #0000ff !important;\n      }\n\n#outlook a {\n    padding:0;\n    color: #ffffff !important;\n    text-decoration: none !important;\n}\n.ExternalClass {\n    width:100%;\n}\n.ExternalClass,\n.ExternalClass p,\n.ExternalClass span,\n.ExternalClass font,\n.ExternalClass td,\n.ExternalClass div {\n    line-height:100%;\n}\n\na[x-apple-data-detectors] {\n    color: #ffffff !important;\n    text-decoration:none!important;\n    font-size:inherit!important;\n    font-family:'Oswald', sans-serif;\n    font-weight:inherit!important;\n    line-height:inherit!important;\n}\n\u003c/style\u003e \n\u003cstyle type=\"text/css\"\u003e\n  tr {\n    border-collapse: collapse;\n  }\n\n  table.es-wrapper {\n    mso-table-lspace:0pt;\n    mso-table-rspace:0pt;\n    border-collapse:collapse;\n    border-spacing:0px;\n    padding:0;\n    Margin:0;\n    width:100%;\n    height:100%;\n    background-repeat:repeat;\n    background-position:center top;\n  }\n  table.es-content {\n    padding:0px;\n    margin:0 auto; \n    text-align: center; \n    mso-table-lspace:0pt;\n    mso-table-rspace:0pt;\n    border-collapse:collapse;\n    border-spacing:0px;\n    table-layout:fixed !important;\n    width:100%;\n  }\n  table.es-content-body {\n    mso-table-lspace:0pt;\n    mso-table-rspace:0pt;\n    border-collapse:collapse;\n    border-spacing:0px;\n    width:100%;\n    padding:0px;\n    margin:0 auto;\n    text-align:center;\n    background-color: transparent;\n  }\n  table.basic {\n    margin:0 auto;\n    width:90%;\n    padding:0px;\n    mso-table-lspace:0pt;\n    mso-table-rspace:0pt;\n    border-collapse:collapse;\n    border-spacing:0px;\n  }\n  td.basic {\n    width:100%;\n    border-spacing:0px;\n    margin:0 auto;\n    padding-left:20px;\n    padding-right:20px;\n    padding-top:10px;\n    padding-bottom:10px;\n  }\n  \u003c/style\u003e\n  \u003cstyle type=\"text/css\"\u003e\n.button-1 {\n  display: inline-block;\n  -webkit-display: inline-block;\n  justify-content: center;\n  border-radius: 4px;\n  background-color: #1E93F0;\n  -webkit-text-size-adjust: none;\n  text-decoration: none;\n  border-radius: 4px;\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  mso-style-priority:100!important;\n  text-decoration:none!important;\n\n  width: 190px;\n  border-top: 1px solid #1E93F0; \n  border-right: 1px solid #1E93F0; \n  border-bottom: 1px solid #1E93F0; \n  border-left: 1px solid #1E93F0;\n  box-shadow: 0 4px #b5b5b5;\n  margin: 0 auto; \n  padding-top:5px;\n  padding-right:20px;\n  padding-bottom:5px;\n  padding-left:20px;\n  text-align: center;\n  vertical-align: middle;\n  word-break: keep-all;\n  mso-border-alt: none;\n  transition: all 0.5s;\n  cursor: pointer !important;\n}\n.button-1:hover {background-color: #1d74ef}\n\n.button-1 span {\n  cursor: pointer;\n  display: inline-block;\n  position: relative;\n  transition: 0.5s;\n}\n\n.button-1:active {\n  background-color: #1d74ef;\n  box-shadow: 0 5px #999;\n  transform: translateY(4px);\n}\n.button-2 {\n  display: inline-block;\n  -webkit-display: inline-block;\n  justify-content: center;\n  border-radius: 4px;\n  background-color: #EBF5FA;\n  -webkit-text-size-adjust: none;\n  text-decoration: none;\n  border-radius: 4px;\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  mso-style-priority:100!important;\n  text-decoration:none!important;\n\n  width: 190px;\n  border-top: 1px solid #EBF5FA;\n  border-right: 1px solid #EBF5FA; \n  border-bottom: 1px solid #EBF5FA;\n  border-left: 1px solid #EBF5FA;\n  box-shadow: 0 4px #b5b5b5;\n  margin: 0 auto; \n  padding-top:5px;\n  padding-right:20px;\n  padding-bottom:5px;\n  padding-left:20px;\n  text-align: center;\n  vertical-align: middle;\n  word-break: keep-all;\n  mso-border-alt: none;\n  transition: all 0.5s;\n  cursor: pointer !important;\n}\n.button-2:hover {background-color: #dce2e5}\n\n.button-2 span {\n  cursor: pointer;\n  display: inline-block;\n  position: relative;\n  transition: 0.5s;\n}\n\n.button-2:active {\n  background-color: #dce2e5;\n  box-shadow: 0 5px #999;\n  transform: translateY(4px);\n}\n\u003c/style\u003e\n  \u003c!-- Next to note, td with constant left right padding --\u003e\n\n \u003c/head\u003e \n \u003cbody style=\"width:100%;font-family:Oswald, sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0;\"\u003e \n  \u003cdiv class=\"es-wrapper-color\" style=\"background-color:#F6F6F6;\"\u003e \n\n\u003c!-- These Tables add the Avior Logo to the Header --\u003e\n\n       \u003ctable class=\"es-content\"\u003e \n\n         \u003ctr\u003e \n          \u003ctd style=\"background-color:#DBE5EA;\"\u003e \n\n           \u003ctable class=\"es-content-body\"\u003e \n\n             \u003ctr\u003e \n                \u003ctd class=\"basic\" style=\"padding-top:15px;padding-bottom:15px;background-color:#242B3D;border-top-left-radius:5px;border-top-right-radius:5px;\"\u003e \u003cimg class=\"adapt-img\" src=\"http://avioranalytics.net/wp-content/uploads/2019/03/Avior_Logo_Fiverr.png\" alt=\"\" style=\"margin:0 auto;display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;max-width:42%;\"\u003e\u003c/td\u003e \n             \u003c/tr\u003e \n           \u003c/table\u003e \u003c/td\u003e \n         \u003c/tr\u003e \n       \u003c/table\u003e \n\n\n       \u003c!-- End Logo --\u003e\n\n       \u003ctable class=\"es-content\"\u003e \n\n         \u003ctr\u003e \n          \u003ctd style=\"background-color:#DBE5EA;\"\u003e \n\n           \u003ctable class=\"es-content-body\"\u003e \n\n             \u003ctr\u003e \n              \u003ctd class=\"basic\" style=\"padding-top:40px;padding-bottom:40px;background-color:#EBF5FA;\"\u003e\n\n                \u003ctable class=\"basic\"\u003e \n\n                \u003c!-- Mail Icon --\u003e\n\n                  \u003ctr\u003e \n                  \u003ctd class=\"basic\"\u003e \u003cimg class=\"adapt-img\" src=\"http://avioranalytics.net/wp-content/uploads/2019/03/Mail-Icon.png\" alt=\"\" style=\"margin:0 auto;display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;max-width:95px;\"\u003e\u003c/td\u003e \n                  \u003c/tr\u003e \n\n                  \u003c!-- Welcome To Avior --\u003e\n\n                  \u003ctr\u003e \n                  \u003ctd class=\"basic\"\u003e \u003ch1 style=\"Margin:0;line-height:36px;mso-line-height-rule:exactly;font-size:30px;font-style:normal;font-weight:normal;color:#333333;text-align:center;\"\u003eWelcome To Avior!\u003c/h1\u003e \u003c/td\u003e \n                  \u003c/tr\u003e \n\n                  \u003c!-- Intro Paragraph --\u003e\n\n                  \u003ctr\u003e \n                    \u003ctd style=\"padding:0;Margin:0;font-size:16px;font-family:'open sans', 'helvetica neue', helvetica, arial, sans-serif;line-height:24px;color:#333333;text-align:left;\"\u003e \u003cp style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;padding-bottom:15px;\"\u003eDear User,\u003c/p\u003e\u003cp style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;padding-bottom:15px;\"\u003eThank you for joining Avior! We are excited to help you take ownership of your care and experience a full return to the activities that are important to you.\u003c/p\u003e\u003cp style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;\"\u003ePlease follow the instructions below to ﬁnish creating your account.\u003c/p\u003e \u003c/td\u003e \n                  \u003c/tr\u003e \n                \u003c/table\u003e \u003c/td\u003e \n              \u003c/tr\u003e \n           \u003c/table\u003e \u003c/td\u003e \n         \u003c/tr\u003e \n       \u003c/table\u003e \n\n       \u003ctable class=\"es-content\" style=\"background-color:#DBE5EA;\"\u003e \n         \u003ctr\u003e \n          \u003ctd\u003e \n           \u003ctable class=\"es-content-body\" style=\"background-color:#FFFFFF;\"\u003e \n             \u003ctr\u003e \n              \u003ctd class=\"basic\" style=\"padding-top:30px;padding-bottom:30px;\"\u003e \n\n               \u003ctable class=\"basic\"\u003e \n                \u003c!-- Step 1 --\u003e\n\n                 \u003ctr\u003e \n                  \u003ctd class=\"basic\"\u003e \u003ch1 style=\"Margin:0;line-height:31px;mso-line-height-rule:exactly;font-size:26px;font-style:normal;font-weight:normal;color:#1E93F0;text-align:center;padding-bottom:10px;\"\u003eSTEP 3:\u003c/h1\u003e\u003ch1 style=\"Margin:0;line-height:31px;mso-line-height-rule:exactly;font-size:26px;font-style:normal;font-weight:normal;color:#1E93F0;text-align:center;\"\u003eSet A New Password\u003c/h1\u003e \u003c/td\u003e \n                \u003c/tr\u003e \n\n                \u003c!-- Text Block --\u003e\n\n                  \u003ctr\u003e \n                    \u003ctd class=\"basic\"\u003e \u003cp style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:16px;font-family:'open sans', 'helvetica neue', helvetica, arial, sans-serif;line-height:24px;color:#333333;\"\u003eHere is your Verification Code:\u003c/p\u003e \n                    \u003c/td\u003e \n                    \u003c/tr\u003e \n\n                  \u003c!-- Code: --\u003e\n\n                     \u003ctr\u003e \n                      \u003ctd class=\"basic\"\u003e \u003cp style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size: 20px; line-height: 32px;color:#333333;\"\u003e{####}\u003c/p\u003e \n                    \u003c/td\u003e  \n                     \u003c/tr\u003e \n\n                     \u003c!-- Text Block --\u003e\n\n                    \u003ctr\u003e \n                    \u003ctd class=\"basic\"\u003e \u003cp style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:16px;font-family:'open sans', 'helvetica neue', helvetica, arial, sans-serif;line-height:24px;color:#333333;\"\u003ePlease click below and set your own password.\u003c/p\u003e \n                    \u003c/td\u003e \n                    \u003c/tr\u003e \n\n                    \u003ctr\u003e \n                      \u003ctd class=\"basic\"\u003e \n                        \u003ca href=\"https://patient.avioranalytics.net/reset-password\" target=\"_blank\"\u003e\n                        \u003cbutton class=\"button-1\"\u003e\n                        \u003cdiv style=\"font-size: 20px; line-height: 32px; color:#FFFFFF;\"\u003e\n                          I'm A Patient\n                        \u003c/div\u003e\n                        \u003c/button\u003e \n                        \u003c/a\u003e\n                      \u003c/td\u003e \n                     \u003c/tr\u003e \n\n                     \u003ctr\u003e \n                      \u003ctd class=\"basic\"\u003e \n                        \u003ca href=\"https://clinic.avioranalytics.net/reset-password\" target=\"_blank\"\u003e\n                        \u003cbutton class=\"button-2\"\u003e\n                          \u003cdiv style=\"font-size: 20px; line-height: 32px;\"\u003e\n                            I'm A Therapist\n                          \u003c/div\u003e\n                        \u003c/button\u003e \n                        \u003c/a\u003e\n                      \u003c/td\u003e \n                     \u003c/tr\u003e\n\n                     \u003ctr\u003e \n                      \u003ctd style=\"padding-top:15px;font-size:16px;font-family:'open sans', 'helvetica neue', helvetica, arial, sans-serif;line-height:24px;color:#333333;text-align:left;\"\u003e \u003cp style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;padding-bottom:10px;\"\u003eSincerely,\u003c/p\u003e\u003cp style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;\"\u003eThe Avior Team\u003c/p\u003e \u003c/td\u003e \n                     \u003c/tr\u003e \n                   \u003c/table\u003e \u003c/td\u003e \n             \u003c/tr\u003e \n           \u003c/table\u003e \u003c/td\u003e \n         \u003c/tr\u003e \n       \u003c/table\u003e \n\n       \u003ctable class=\"es-content\"\u003e \n\n         \u003ctr\u003e \n          \u003ctd style=\"padding:0;margin:0 auto;background-color:#DBE5EA;\"\u003e \n\n           \u003ctable class=\"es-content-body\" style=\"background-color:#51585D;border-bottom-left-radius:5px;border-bottom-right-radius:5px;\"\u003e \n\n             \u003ctr\u003e \n              \u003ctd style=\"Margin:0;padding-left:20px;padding-right:20px;padding-top:25px;padding-bottom:25px;\"\u003e \n\n               \u003ctable class=\"basic\"\u003e \n\n                 \u003ctr\u003e \n                  \u003ctd style=\"padding:0;Margin:0 auto;width:390px;vertical-align:top;\"\u003e \n\n                   \u003ctable class=\"basic\"\u003e \n\n                     \u003ctr\u003e \n                      \u003ctd style=\"padding:0;Margin:0 auto;\"\u003e \u003cp style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:'open sans', 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#FFFFFF;\"\u003e© 2019, Avior Analytics, LLC All rights reserved.\u003c/p\u003e\u003c/td\u003e \n                     \u003c/tr\u003e \n                   \u003c/table\u003e \u003c/td\u003e \n                 \u003c/tr\u003e \n               \u003c/table\u003e \u003c/td\u003e \n             \u003c/tr\u003e \n           \u003c/table\u003e \u003c/td\u003e \n         \u003c/tr\u003e \n       \u003c/table\u003e \n       \u003c/td\u003e \n     \u003c/tr\u003e \n   \u003c/table\u003e \n  \u003c/div\u003e  \n \u003c/body\u003e\n\u003c/html\u003e",
+                "email_message_by_link": "\u003c!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"\u003e\n\u003chtml style=\"width:100%;font-family:Oswald, sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0;\"\u003e\n \u003chead\u003e \n  \u003cmeta charset=\"UTF-8\"\u003e \n  \u003cmeta content=\"width=device-width, initial-scale=1\" name=\"viewport\"\u003e \n  \u003cmeta name=\"x-apple-disable-message-reformatting\"\u003e \n  \u003cmeta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"\u003e \n  \u003cmeta content=\"telephone=no\" name=\"format-detection\"\u003e \n  \u003ctitle\u003eWelcome To Avior!\u003c/title\u003e \n  \u003clink href=\"https://fonts.googleapis.com/css?family=Oswald:400,700\" rel=\"stylesheet\"\u003e \n  \u003clink href=\"https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i\" rel=\"stylesheet\"\u003e \n  \u003clink rel=\"shortcut icon\" type=\"image/png\" href=\"https://demo.stripo.email/assets/img/favicon.png\"\u003e \n  \u003cstyle type=\"text/css\"\u003e\n    @media only screen and (max-width:430px) {\n      p, ul li, ol li, a { \n        font-size:16px!important; \n        line-height:150%!important \n      } \n      a[x-apple-data-detectors=true] {\n      color: #ffffff !important;\n      text-decoration: none !important;\n    }\n      a {\n      color: #ffffff !important;\n      text-decoration: none !important;\n      }\n      a:hover {\n      color: #0000ff !important;\n    }\n        h1 { \n          font-size:30px!important; \n          text-align:center; \n          line-height:120% \n        } \n        \n        h2 { \n          font-size:26px!important; \n          text-align:center; \n          line-height:120% \n        } \n        \n        h3 { \n          font-size:20px!important; \n          text-align:center; \n          line-height:120% \n        } \n        h1 a { \n          font-size:30px!important;\n          color: #ffffff !important;\n        } \n        h2 a { \n          font-size:26px!important; \n          color: #ffffff !important;\n        } \n        h3 a { \n          font-size:20px!important;\n          color: #ffffff !important;\n        } \n        *[class=\"gmail-fix\"] { \n          display:none!important \n        } \n        .adapt-img { \n          width:100%!important; \n          height:auto!important; \n        } \n      }\n/*End @media*/\n    a[x-apple-data-detectors=true] {\n      color: #ffffff !important;\n      text-decoration: none !important;\n    }\n    a {\n      color: #ffffff !important;\n      text-decoration: none !important;\n    }\n    a:hover {\n      color: #0000ff !important;\n      }\n\n#outlook a {\n    padding:0;\n    color: #ffffff !important;\n    text-decoration: none !important;\n}\n.ExternalClass {\n    width:100%;\n}\n.ExternalClass,\n.ExternalClass p,\n.ExternalClass span,\n.ExternalClass font,\n.ExternalClass td,\n.ExternalClass div {\n    line-height:100%;\n}\n\na[x-apple-data-detectors] {\n    color: #ffffff !important;\n    text-decoration:none!important;\n    font-size:inherit!important;\n    font-family:'Oswald', sans-serif;\n    font-weight:inherit!important;\n    line-height:inherit!important;\n}\n\u003c/style\u003e \n\u003cstyle type=\"text/css\"\u003e\n  tr {\n    border-collapse: collapse;\n  }\n\n  table.es-wrapper {\n    mso-table-lspace:0pt;\n    mso-table-rspace:0pt;\n    border-collapse:collapse;\n    border-spacing:0px;\n    padding:0;\n    Margin:0;\n    width:100%;\n    height:100%;\n    background-repeat:repeat;\n    background-position:center top;\n  }\n  table.es-content {\n    padding:0px;\n    margin:0 auto; \n    text-align: center; \n    mso-table-lspace:0pt;\n    mso-table-rspace:0pt;\n    border-collapse:collapse;\n    border-spacing:0px;\n    table-layout:fixed !important;\n    width:100%;\n  }\n  table.es-content-body {\n    mso-table-lspace:0pt;\n    mso-table-rspace:0pt;\n    border-collapse:collapse;\n    border-spacing:0px;\n    width:100%;\n    padding:0px;\n    margin:0 auto;\n    text-align:center;\n    background-color: transparent;\n  }\n  table.basic {\n    margin:0 auto;\n    width:90%;\n    padding:0px;\n    mso-table-lspace:0pt;\n    mso-table-rspace:0pt;\n    border-collapse:collapse;\n    border-spacing:0px;\n  }\n  td.basic {\n    width:100%;\n    border-spacing:0px;\n    margin:0 auto;\n    padding-left:20px;\n    padding-right:20px;\n    padding-top:10px;\n    padding-bottom:10px;\n  }\n  \u003c/style\u003e\n  \u003cstyle type=\"text/css\"\u003e\n.button-1 {\n  display: inline-block;\n  -webkit-display: inline-block;\n  justify-content: center;\n  border-radius: 4px;\n  background-color: #1E93F0;\n  -webkit-text-size-adjust: none;\n  text-decoration: none;\n  border-radius: 4px;\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  mso-style-priority:100!important;\n  text-decoration:none!important;\n\n  width: 190px;\n  border-top: 1px solid #1E93F0; \n  border-right: 1px solid #1E93F0; \n  border-bottom: 1px solid #1E93F0; \n  border-left: 1px solid #1E93F0;\n  box-shadow: 0 4px #b5b5b5;\n  margin: 0 auto; \n  padding-top:5px;\n  padding-right:20px;\n  padding-bottom:5px;\n  padding-left:20px;\n  text-align: center;\n  vertical-align: middle;\n  word-break: keep-all;\n  mso-border-alt: none;\n  transition: all 0.5s;\n  cursor: pointer !important;\n}\n.button-1:hover {background-color: #1d74ef}\n\n.button-1 span {\n  cursor: pointer;\n  display: inline-block;\n  position: relative;\n  transition: 0.5s;\n}\n\n.button-1:active {\n  background-color: #1d74ef;\n  box-shadow: 0 5px #999;\n  transform: translateY(4px);\n}\n.button-2 {\n  display: inline-block;\n  -webkit-display: inline-block;\n  justify-content: center;\n  border-radius: 4px;\n  background-color: #EBF5FA;\n  -webkit-text-size-adjust: none;\n  text-decoration: none;\n  border-radius: 4px;\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  mso-style-priority:100!important;\n  text-decoration:none!important;\n\n  width: 190px;\n  border-top: 1px solid #EBF5FA;\n  border-right: 1px solid #EBF5FA; \n  border-bottom: 1px solid #EBF5FA;\n  border-left: 1px solid #EBF5FA;\n  box-shadow: 0 4px #b5b5b5;\n  margin: 0 auto; \n  padding-top:5px;\n  padding-right:20px;\n  padding-bottom:5px;\n  padding-left:20px;\n  text-align: center;\n  vertical-align: middle;\n  word-break: keep-all;\n  mso-border-alt: none;\n  transition: all 0.5s;\n  cursor: pointer !important;\n}\n.button-2:hover {background-color: #dce2e5}\n\n.button-2 span {\n  cursor: pointer;\n  display: inline-block;\n  position: relative;\n  transition: 0.5s;\n}\n\n.button-2:active {\n  background-color: #dce2e5;\n  box-shadow: 0 5px #999;\n  transform: translateY(4px);\n}\n\u003c/style\u003e\n  \u003c!-- Next to note, td with constant left right padding --\u003e\n\n \u003c/head\u003e \n \u003cbody style=\"width:100%;font-family:Oswald, sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0;\"\u003e \n  \u003cdiv class=\"es-wrapper-color\" style=\"background-color:#F6F6F6;\"\u003e \n\n\u003c!-- These Tables add the Avior Logo to the Header --\u003e\n\n       \u003ctable class=\"es-content\"\u003e \n\n         \u003ctr\u003e \n          \u003ctd style=\"background-color:#DBE5EA;\"\u003e \n\n           \u003ctable class=\"es-content-body\"\u003e \n\n             \u003ctr\u003e \n                \u003ctd class=\"basic\" style=\"padding-top:15px;padding-bottom:15px;background-color:#242B3D;border-top-left-radius:5px;border-top-right-radius:5px;\"\u003e \u003cimg class=\"adapt-img\" src=\"http://avioranalytics.net/wp-content/uploads/2019/03/Avior_Logo_Fiverr.png\" alt=\"\" style=\"margin:0 auto;display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;max-width:42%;\"\u003e\u003c/td\u003e \n             \u003c/tr\u003e \n           \u003c/table\u003e \u003c/td\u003e \n         \u003c/tr\u003e \n       \u003c/table\u003e \n\n\n       \u003c!-- End Logo --\u003e\n\n       \u003ctable class=\"es-content\"\u003e \n\n         \u003ctr\u003e \n          \u003ctd style=\"background-color:#DBE5EA;\"\u003e \n\n           \u003ctable class=\"es-content-body\"\u003e \n\n             \u003ctr\u003e \n              \u003ctd class=\"basic\" style=\"padding-top:40px;padding-bottom:40px;background-color:#EBF5FA;\"\u003e\n\n                \u003ctable class=\"basic\"\u003e \n\n                \u003c!-- Mail Icon --\u003e\n\n                  \u003ctr\u003e \n                  \u003ctd class=\"basic\"\u003e \u003cimg class=\"adapt-img\" src=\"http://avioranalytics.net/wp-content/uploads/2019/03/Mail-Icon.png\" alt=\"\" style=\"margin:0 auto;display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;max-width:95px;\"\u003e\u003c/td\u003e \n                  \u003c/tr\u003e \n\n                  \u003c!-- Welcome To Avior --\u003e\n\n                  \u003ctr\u003e \n                  \u003ctd class=\"basic\"\u003e \u003ch1 style=\"Margin:0;line-height:36px;mso-line-height-rule:exactly;font-size:30px;font-style:normal;font-weight:normal;color:#333333;text-align:center;\"\u003eWelcome To Avior!\u003c/h1\u003e \u003c/td\u003e \n                  \u003c/tr\u003e \n\n                  \u003c!-- Intro Paragraph --\u003e\n\n                  \u003ctr\u003e \n                    \u003ctd style=\"padding:0;Margin:0;font-size:16px;font-family:'open sans', 'helvetica neue', helvetica, arial, sans-serif;line-height:24px;color:#333333;text-align:left;\"\u003e \u003cp style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;padding-bottom:15px;\"\u003eDear User,\u003c/p\u003e\u003cp style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;padding-bottom:15px;\"\u003eThank you for joining Avior! We are excited to help you take ownership of your care and experience a full return to the activities that are important to you.\u003c/p\u003e\u003cp style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;\"\u003ePlease follow the instructions below to ﬁnish creating your account.\u003c/p\u003e \u003c/td\u003e \n                  \u003c/tr\u003e \n                \u003c/table\u003e \u003c/td\u003e \n              \u003c/tr\u003e \n           \u003c/table\u003e \u003c/td\u003e \n         \u003c/tr\u003e \n       \u003c/table\u003e \n\n       \u003ctable class=\"es-content\" style=\"background-color:#DBE5EA;\"\u003e \n         \u003ctr\u003e \n          \u003ctd\u003e \n           \u003ctable class=\"es-content-body\" style=\"background-color:#FFFFFF;\"\u003e \n             \u003ctr\u003e \n              \u003ctd class=\"basic\" style=\"padding-top:30px;padding-bottom:30px;\"\u003e \n\n               \u003ctable class=\"basic\"\u003e \n                \u003c!-- Step 1 --\u003e\n\n                 \u003ctr\u003e \n                  \u003ctd class=\"basic\"\u003e \u003ch1 style=\"Margin:0;line-height:31px;mso-line-height-rule:exactly;font-size:26px;font-style:normal;font-weight:normal;color:#1E93F0;text-align:center;padding-bottom:10px;\"\u003eSTEP 1:\u003c/h1\u003e\u003ch1 style=\"Margin:0;line-height:31px;mso-line-height-rule:exactly;font-size:26px;font-style:normal;font-weight:normal;color:#1E93F0;text-align:center;\"\u003eVerify Your Email\u003c/h1\u003e \u003c/td\u003e \n                \u003c/tr\u003e \n\n                \u003c!-- Text Block --\u003e\n\n                  \u003ctr\u003e \n                    \u003ctd class=\"basic\"\u003e \u003cp style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:16px;font-family:'open sans', 'helvetica neue', helvetica, arial, sans-serif;line-height:24px;color:#333333;\"\u003ePlease Click the link below to verify your email address. Then proceed to Step 2!\u003c/p\u003e \u003c/td\u003e \n                    \u003c/tr\u003e \n\n                  \u003c!-- Button --\u003e\n\n                     \u003ctr\u003e \n                      \u003ctd class=\"basic\"\u003e \n                        \u003cbutton class=\"button-1\" style=\"width:auto;\"\u003e\n                        \u003cdiv style=\"font-size: 20px; line-height: 32px; color:#ffffff;\"\u003e\n                          {##Verify Email##}\n                        \u003c/div\u003e\n                      \u003c/button\u003e \u003c/td\u003e \n                     \u003c/tr\u003e \n                   \u003c/table\u003e \u003c/td\u003e \n             \u003c/tr\u003e \n           \u003c/table\u003e \u003c/td\u003e \n         \u003c/tr\u003e \n       \u003c/table\u003e \n\n       \u003ctable class=\"es-content\"\u003e \n\n         \u003ctr\u003e \n          \u003ctd style=\"padding:0;Margin:0;background-color:#DBE5EA;\"\u003e \n\n           \u003ctable class=\"es-content-body\" style=\"background-color:#FFFFFF;border-top:1px solid #DBE5EA;\"\u003e \n\n             \u003ctr\u003e \n              \u003ctd class=\"basic\" style=\"padding-top:30px;padding-bottom:30px;\"\u003e \n\n               \u003ctable class=\"basic\"\u003e \n\n                \u003ctr\u003e \n                  \u003ctd class=\"basic\"\u003e \u003ch1 style=\"Margin:0;line-height:31px;mso-line-height-rule:exactly;font-size:26px;font-style:normal;font-weight:normal;color:#1E93F0;text-align:center;padding-bottom:10px;\"\u003eSTEP 2:\u003c/h1\u003e\u003ch1 style=\"Margin:0;line-height:31px;mso-line-height-rule:exactly;font-size:26px;font-style:normal;font-weight:normal;color:#1E93F0;text-align:center;\"\u003eGet a Temporary Password\u003c/h1\u003e \u003c/td\u003e \n                 \u003c/tr\u003e \n\n                  \u003ctr\u003e \n                  \u003ctd class=\"basic\"\u003e \n                    \u003cp style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:16px;font-family:'open sans', 'helvetica neue', helvetica, arial, sans-serif;line-height:24px;color:#333333;\"\u003ePlease click below and enter your email address. You will receive an email with further instructions!\u003c/p\u003e \n                  \u003c/td\u003e \n                  \u003c/tr\u003e \n\n                     \u003ctr\u003e \n                      \u003ctd class=\"basic\"\u003e \n                        \u003ca href=\"https://patient.avioranalytics.net/forgot-password\" target=\"_blank\"\u003e\n                        \u003cbutton class=\"button-1\"\u003e\n                        \u003cdiv style=\"font-size: 20px; line-height: 32px; color:#FFFFFF;\"\u003e\n                          I'm A Patient\n                        \u003c/div\u003e\n                        \u003c/button\u003e \n                        \u003c/a\u003e\n                      \u003c/td\u003e \n                     \u003c/tr\u003e \n\n                     \u003ctr\u003e \n                      \u003ctd class=\"basic\"\u003e \n                        \u003ca href=\"https://clinic.avioranalytics.net/forgot-password\" target=\"_blank\"\u003e\n                        \u003cbutton class=\"button-2\"\u003e\n                          \u003cdiv style=\"font-size: 20px; line-height: 32px;\"\u003e\n                            I'm A Therapist\n                          \u003c/div\u003e\n                        \u003c/button\u003e \n                        \u003c/a\u003e\n                      \u003c/td\u003e \n                     \u003c/tr\u003e \n\n                     \u003ctr\u003e \n                      \u003ctd style=\"padding-top:15px;font-size:16px;font-family:'open sans', 'helvetica neue', helvetica, arial, sans-serif;line-height:24px;color:#333333;text-align:left;\"\u003e \u003cp style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;padding-bottom:10px;\"\u003eSincerely,\u003c/p\u003e\u003cp style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;\"\u003eThe Avior Team\u003c/p\u003e \u003c/td\u003e \n                     \u003c/tr\u003e \n                   \u003c/table\u003e \u003c/td\u003e \n             \u003c/tr\u003e \n           \u003c/table\u003e \u003c/td\u003e \n         \u003c/tr\u003e \n       \u003c/table\u003e \n\n       \u003ctable class=\"es-content\"\u003e \n\n         \u003ctr\u003e \n          \u003ctd style=\"padding:0;margin:0 auto;background-color:#DBE5EA;\"\u003e \n\n           \u003ctable class=\"es-content-body\" style=\"background-color:#51585D;border-bottom-left-radius:5px;border-bottom-right-radius:5px;\"\u003e \n\n             \u003ctr\u003e \n              \u003ctd style=\"Margin:0;padding-left:20px;padding-right:20px;padding-top:25px;padding-bottom:25px;\"\u003e \n\n               \u003ctable class=\"basic\"\u003e \n\n                 \u003ctr\u003e \n                  \u003ctd style=\"padding:0;Margin:0 auto;width:90%;vertical-align:top;\"\u003e \n\n                   \u003ctable class=\"basic\"\u003e \n\n                     \u003ctr\u003e \n                      \u003ctd style=\"padding:0;Margin:0 auto;\"\u003e \u003cp style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:'open sans', 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#FFFFFF;\"\u003e© 2019, Avior Analytics, LLC All rights reserved.\u003c/p\u003e\u003c/td\u003e \n                     \u003c/tr\u003e \n                   \u003c/table\u003e \u003c/td\u003e \n                 \u003c/tr\u003e \n               \u003c/table\u003e \u003c/td\u003e \n             \u003c/tr\u003e \n           \u003c/table\u003e \u003c/td\u003e \n         \u003c/tr\u003e \n       \u003c/table\u003e \n       \u003c/td\u003e \n     \u003c/tr\u003e \n   \u003c/table\u003e \n  \u003c/div\u003e  \n \u003c/body\u003e\n\u003c/html\u003e",
+                "email_subject": "Final Step",
+                "email_subject_by_link": "Welcome to Avior!",
+                "sms_message": "Your verification code is {####}. "
+              }
+            ]
+          },
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjAifQ=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_internet_gateway",
+      "name": "terraform_igw",
+      "provider": "provider.aws",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ec2:us-east-1:616100519737:internet-gateway/igw-0385e932790051faa",
+            "id": "igw-0385e932790051faa",
+            "owner_id": "616100519737",
+            "tags": {
+              "Name": "main"
+            },
+            "vpc_id": "vpc-0c12de6ae6d738134"
+          },
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjAifQ=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_lambda_function",
+      "name": "custom_cognito",
+      "provider": "provider.aws",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:lambda:us-east-1:616100519737:function:custom-cognito-message",
+            "dead_letter_config": [],
+            "description": "",
+            "environment": [],
+            "file_system_config": [],
+            "filename": null,
+            "function_name": "custom-cognito-message",
+            "handler": "index.handler",
+            "id": "custom-cognito-message",
+            "invoke_arn": "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:616100519737:function:custom-cognito-message/invocations",
+            "kms_key_arn": "",
+            "last_modified": "2019-10-22T00:36:45.458+0000",
+            "layers": [],
+            "memory_size": 768,
+            "publish": null,
+            "qualified_arn": "arn:aws:lambda:us-east-1:616100519737:function:custom-cognito-message:$LATEST",
+            "reserved_concurrent_executions": -1,
+            "role": "arn:aws:iam::616100519737:role/service-role/custom-cognito-message-role-v29xexuq",
+            "runtime": "nodejs10.x",
+            "s3_bucket": null,
+            "s3_key": null,
+            "s3_object_version": null,
+            "source_code_hash": "MWnBk/WZKC46DsnRsv29HtuG1F0LbQDTigtovmiE2V4=",
+            "source_code_size": 216824,
+            "tags": {},
+            "timeout": 3,
+            "timeouts": {
+              "create": null
+            },
+            "tracing_config": [
+              {
+                "mode": "PassThrough"
+              }
+            ],
+            "version": "$LATEST",
+            "vpc_config": []
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDB9LCJzY2hlbWFfdmVyc2lvbiI6IjAifQ=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_lambda_function",
+      "name": "segment",
+      "provider": "provider.aws",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:lambda:us-east-1:616100519737:function:usage-analytics-production",
+            "dead_letter_config": [],
+            "description": "",
+            "environment": [],
+            "file_system_config": [],
+            "filename": null,
+            "function_name": "usage-analytics-production",
+            "handler": "index.handler",
+            "id": "usage-analytics-production",
+            "invoke_arn": "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:616100519737:function:usage-analytics-production/invocations",
+            "kms_key_arn": "",
+            "last_modified": "2019-10-17T03:21:50.005+0000",
+            "layers": [],
+            "memory_size": 512,
+            "publish": null,
+            "qualified_arn": "arn:aws:lambda:us-east-1:616100519737:function:usage-analytics-production:$LATEST",
+            "reserved_concurrent_executions": -1,
+            "role": "arn:aws:iam::616100519737:role/service-role/usage-analytics-role-ky1t93md",
+            "runtime": "nodejs10.x",
+            "s3_bucket": null,
+            "s3_key": null,
+            "s3_object_version": null,
+            "source_code_hash": "9fr/S32W9jmhozM4s6hX1sfP7vzvEILhsZ8P8dflMsc=",
+            "source_code_size": 139840,
+            "tags": {},
+            "timeout": 3,
+            "timeouts": {
+              "create": null
+            },
+            "tracing_config": [
+              {
+                "mode": "PassThrough"
+              }
+            ],
+            "version": "$LATEST",
+            "vpc_config": []
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDB9LCJzY2hlbWFfdmVyc2lvbiI6IjAifQ=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_rds_cluster",
+      "name": "database",
+      "provider": "provider.aws",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "apply_immediately": null,
+            "arn": "arn:aws:rds:us-east-1:616100519737:cluster:sandbox-database-cluster",
+            "availability_zones": [
+              "us-east-1a",
+              "us-east-1c",
+              "us-east-1e"
+            ],
+            "backtrack_window": 0,
+            "backup_retention_period": 7,
+            "cluster_identifier": "sandbox-database-cluster",
+            "cluster_identifier_prefix": null,
+            "cluster_members": [
+              "sandbox-database"
+            ],
+            "cluster_resource_id": "cluster-PSSB3S753RXCVO23RRODDRIBME",
+            "copy_tags_to_snapshot": false,
+            "database_name": "avior",
+            "db_cluster_parameter_group_name": "default.aurora5.6",
+            "db_subnet_group_name": "default",
+            "deletion_protection": false,
+            "enable_http_endpoint": false,
+            "enabled_cloudwatch_logs_exports": [],
+            "endpoint": "sandbox-database-cluster.cluster-c9tifqxuh1z2.us-east-1.rds.amazonaws.com",
+            "engine": "aurora",
+            "engine_mode": "provisioned",
+            "engine_version": "5.6.10a",
+            "final_snapshot_identifier": null,
+            "global_cluster_identifier": "",
+            "hosted_zone_id": "Z2R2ITUGPM61AM",
+            "iam_database_authentication_enabled": false,
+            "iam_roles": [],
+            "id": "sandbox-database-cluster",
+            "kms_key_id": "",
+            "master_password": null,
+            "master_username": "root",
+            "port": 3306,
+            "preferred_backup_window": "04:00-06:00",
+            "preferred_maintenance_window": "sat:00:00-sat:02:00",
+            "reader_endpoint": "sandbox-database-cluster.cluster-ro-c9tifqxuh1z2.us-east-1.rds.amazonaws.com",
+            "replication_source_identifier": "",
+            "s3_import": [],
+            "scaling_configuration": [],
+            "skip_final_snapshot": true,
+            "snapshot_identifier": null,
+            "source_region": null,
+            "storage_encrypted": false,
+            "tags": {},
+            "timeouts": {
+              "create": null,
+              "delete": null,
+              "update": null
+            },
+            "vpc_security_group_ids": [
+              "sg-aa0cffeb"
+            ]
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo3MjAwMDAwMDAwMDAwLCJkZWxldGUiOjcyMDAwMDAwMDAwMDAsInVwZGF0ZSI6NzIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMCJ9"
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_route53_zone",
+      "name": "zone",
+      "provider": "provider.aws",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "comment": "Managed by Terraform",
+            "delegation_set_id": "",
+            "force_destroy": null,
+            "id": "Z1M46UMT2PY8S",
+            "name": "avioranalytics.net.",
+            "name_servers": [
+              "ns-1476.awsdns-56.org",
+              "ns-1899.awsdns-45.co.uk",
+              "ns-297.awsdns-37.com",
+              "ns-679.awsdns-20.net"
+            ],
+            "tags": {
+              "Name": "avioranalytics.net"
+            },
+            "vpc": [],
+            "vpc_id": null,
+            "vpc_region": null,
+            "zone_id": "Z1M46UMT2PY8S"
+          },
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjAifQ=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_route_table",
+      "name": "public_rt",
+      "provider": "provider.aws",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "rtb-0ddd0205d6b43162e",
+            "owner_id": "616100519737",
+            "propagating_vgws": [],
+            "route": [],
+            "tags": {},
+            "vpc_id": "vpc-0c12de6ae6d738134"
+          },
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjAifQ=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_s3_bucket",
+      "name": "avior",
+      "provider": "provider.aws",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "acceleration_status": "",
+            "acl": null,
+            "arn": "arn:aws:s3:::avior",
+            "bucket": "avior",
+            "bucket_domain_name": "avior.s3.amazonaws.com",
+            "bucket_prefix": null,
+            "bucket_regional_domain_name": "avior.s3.amazonaws.com",
+            "cors_rule": [],
+            "force_destroy": null,
+            "grant": [
+              {
+                "id": "",
+                "permissions": [
+                  "READ"
+                ],
+                "type": "Group",
+                "uri": "http://acs.amazonaws.com/groups/global/AllUsers"
+              },
+              {
+                "id": "13e92d6fccfa4d7811a5c7612062ba9a0f11c684f059db437b0f11f3c538bbae",
+                "permissions": [
+                  "FULL_CONTROL"
+                ],
+                "type": "CanonicalUser",
+                "uri": ""
+              }
+            ],
+            "hosted_zone_id": "Z3AQBSTGFYJSTF",
+            "id": "avior",
+            "lifecycle_rule": [],
+            "logging": [],
+            "object_lock_configuration": [],
+            "policy": null,
+            "region": "us-east-1",
+            "replication_configuration": [],
+            "request_payer": "BucketOwner",
+            "server_side_encryption_configuration": [],
+            "tags": {},
+            "versioning": [
+              {
+                "enabled": false,
+                "mfa_delete": false
+              }
+            ],
+            "website": [],
+            "website_domain": null,
+            "website_endpoint": null
+          },
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjAifQ=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_s3_bucket",
+      "name": "terraform",
+      "provider": "provider.aws",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "acceleration_status": "",
+            "acl": null,
+            "arn": "arn:aws:s3:::terraform.avioranalytics.net",
+            "bucket": "terraform.avioranalytics.net",
+            "bucket_domain_name": "terraform.avioranalytics.net.s3.amazonaws.com",
+            "bucket_prefix": null,
+            "bucket_regional_domain_name": "terraform.avioranalytics.net.s3.amazonaws.com",
+            "cors_rule": [],
+            "force_destroy": null,
+            "grant": [
+              {
+                "id": "",
+                "permissions": [
+                  "READ"
+                ],
+                "type": "Group",
+                "uri": "http://acs.amazonaws.com/groups/global/AllUsers"
+              },
+              {
+                "id": "13e92d6fccfa4d7811a5c7612062ba9a0f11c684f059db437b0f11f3c538bbae",
+                "permissions": [
+                  "FULL_CONTROL"
+                ],
+                "type": "CanonicalUser",
+                "uri": ""
+              }
+            ],
+            "hosted_zone_id": "Z3AQBSTGFYJSTF",
+            "id": "terraform.avioranalytics.net",
+            "lifecycle_rule": [],
+            "logging": [],
+            "object_lock_configuration": [],
+            "policy": null,
+            "region": "us-east-1",
+            "replication_configuration": [],
+            "request_payer": "BucketOwner",
+            "server_side_encryption_configuration": [],
+            "tags": {
+              "Name": "terraform.avioranalytics.net"
+            },
+            "versioning": [
+              {
+                "enabled": true,
+                "mfa_delete": false
+              }
+            ],
+            "website": [
+              {
+                "error_document": "index.html",
+                "index_document": "index.html",
+                "redirect_all_requests_to": "",
+                "routing_rules": ""
+              }
+            ],
+            "website_domain": "s3-website-us-east-1.amazonaws.com",
+            "website_endpoint": "terraform.avioranalytics.net.s3-website-us-east-1.amazonaws.com"
+          },
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjAifQ=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_s3_bucket_policy",
+      "name": "avior",
+      "provider": "provider.aws",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "bucket": "avior",
+            "id": "avior",
+            "policy": "{\"Version\":\"2008-10-17\",\"Statement\":[{\"Sid\":\"AllowPublicRead\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"*\"},\"Action\":\"s3:GetObject\",\"Resource\":\"arn:aws:s3:::avior/*\"}]}"
+          },
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjAifQ=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_s3_bucket_policy",
+      "name": "terraform",
+      "provider": "provider.aws",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "bucket": "terraform.avioranalytics.net",
+            "id": "terraform.avioranalytics.net",
+            "policy": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Sid\":\"AllowPublicGet\",\"Effect\":\"Allow\",\"Principal\":\"*\",\"Action\":\"s3:GetObject\",\"Resource\":\"arn:aws:s3:::terraform.avioranalytics.net/*\"}]}"
+          },
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjAifQ=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_subnet",
+      "name": "public",
+      "provider": "provider.aws",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:us-east-1:616100519737:subnet/subnet-02a0a302bb4fc7cff",
+            "assign_ipv6_address_on_creation": false,
+            "availability_zone": "us-east-1a",
+            "availability_zone_id": "use1-az6",
+            "cidr_block": "172.31.0.0/20",
+            "id": "subnet-02a0a302bb4fc7cff",
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_association_id": "",
+            "map_public_ip_on_launch": true,
+            "outpost_arn": "",
+            "owner_id": "616100519737",
+            "tags": {
+              "Name": "Terraform Subnet-1"
+            },
+            "timeouts": {
+              "create": null,
+              "delete": null
+            },
+            "vpc_id": "vpc-0c12de6ae6d738134"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9"
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_vpc",
+      "name": "terraform_vpc",
+      "provider": "provider.aws",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:us-east-1:616100519737:vpc/vpc-0c12de6ae6d738134",
+            "assign_generated_ipv6_cidr_block": false,
+            "cidr_block": "172.31.0.0/16",
+            "default_network_acl_id": "acl-02d25c6359d0161ea",
+            "default_route_table_id": "rtb-0ddd0205d6b43162e",
+            "default_security_group_id": "sg-0694b08fce875f78f",
+            "dhcp_options_id": "dopt-33561548",
+            "enable_classiclink": false,
+            "enable_classiclink_dns_support": false,
+            "enable_dns_hostnames": false,
+            "enable_dns_support": true,
+            "id": "vpc-0c12de6ae6d738134",
+            "instance_tenancy": "default",
+            "ipv6_association_id": "",
+            "ipv6_cidr_block": "",
+            "main_route_table_id": "rtb-0ddd0205d6b43162e",
+            "owner_id": "616100519737",
+            "tags": {
+              "Name": "TerraformVPC"
+            }
+          },
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjEifQ=="
+        }
+      ]
+    }
+  ]
+}
